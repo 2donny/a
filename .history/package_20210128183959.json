@@ -8,12 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.0",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}
+
+"@tailwindcss/typography": "^0.4.0",
     "classnames": "^2.2.6",
     "gsap": "^3.6.0",
-    "next": "^10.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "imports-loader": "^1.2.0",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-headroom": "^3.1.0"
   },
   "devDependencies": {
@@ -21,5 +28,3 @@
     "postcss": "^8.2.4",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^2.0.2"
-  }
-}
