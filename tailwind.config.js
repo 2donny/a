@@ -11,6 +11,10 @@ module.exports = {
     },
     theme: {
       extend: {
+        backgroundPosition: {
+          'top-half': '0 -250px',
+          'bottom-half': '0 250px',
+        },
         fontSize: {
           "7xl": "4.5rem",
           '5xl': '2.5rem',
