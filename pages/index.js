@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef, useReducer } from 'react';
 import Head from 'next/head'
 import Layout from '../components/Layout';
-import { Power3, TweenMax  } from 'gsap/dist/gsap';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Images from 'next/image';
+import Swiper from '../components/Swiper';
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
@@ -145,32 +145,37 @@ export default function Home() {
           </h1>
         </section>
 
-        <section style={{height: "100vh" }} className="bg-white relative px-20">
+        {/* Dedication 1 */}
+        <section style={{height: "100vh" }} className="bg-white relative px-40">
           <div>
             <h1 data-aos="fade-right" className="opacity-0 text-black text-7xl font-bold  absolute top-1/4 text-center"> 
-              Dedication
+              Dedication - CS
             </h1>
             <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">나를 큰폭으로 성장시켜주었던 전공 과제들 </p>
           </div>
-          <div data-aos="fade-right">
-            {/* <article>
-                하루
-            </article>
-            <article>
-              케어링앤컴퍼니 외주
-            </article>
-            <article>
-              정적 블로그 
-            </article> */}
+          <div className="absolute top-1/2">
+            <Swiper />
           </div>
         </section>
 
-        
+        {/* Dedication 2 */}
+        <section style={{height: "100vh" }} className="bg-white relative px-40">
+          <div>
+            <h1 data-aos="fade-right" className="opacity-0 text-black text-7xl font-bold  absolute top-1/4 text-center"> 
+              Dedication - Project
+            </h1>
+            <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">몰입하여 진행한 프로젝트들 </p>
+          </div>
+          <div className="absolute top-1/2">
+            <Swiper />
+          </div>
+        </section>
+
       </main>
     
       {/* footer */}
-      <footer className="h-24">
-        <div className="w-32 mx-auto flex justify-evenly">
+      <footer className="h-32">
+        <div className="w-32 mx-auto flex justify-evenly content-center">
           <a href="https://github.com/2donny">
             <Images 
               src="/GitHub-Mark-32px.png"
@@ -183,6 +188,7 @@ export default function Home() {
               src="/blog.png"
               width={30}
               height={30}
+              
             />
           </a>
         </div>
