@@ -11,6 +11,9 @@ module.exports = {
     },
     theme: {
       extend: {
+        backgroundColor: {
+          'footer': '#202020'
+        },
         backgroundPosition: {
           'top-half': '0 -250px',
           'bottom-half': '0 250px',
