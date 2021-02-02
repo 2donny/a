@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Images from 'next/image';
-import Swiper from '../components/Swiper-cs';
 
 import SwiperCS from '../components/Swiper-cs';
 import SwiperProject from '../components/Swiper-project';
@@ -58,7 +57,7 @@ export default function Home() {
         toggleActions: "restart pause reverse pause",
       },
       opacity: 1,
-      duration: 5
+      duration: 8
     })
 
     gsap.to("#blank", {
@@ -77,7 +76,6 @@ export default function Home() {
     // AOS
     Aos.init({ offset: 100, duration: 1500,});
 
-    // TWEEN
 
   }, []);
 
@@ -91,7 +89,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div id="intro" className="w-screen h-screen relative">
+        <div id="intro" className="h-screen relative">
           <div 
             style={{
               backgroundImage: "url('./macbook.jpg')" ,
@@ -109,10 +107,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="blank"  style={{height: "600px"}} className="bg-black"></div>
+        <div id="blank"  style={{width: '100%', height: "1000px"}} className="bg-black"></div>
 
-        <section style={{height: "110vh" }} className="bg-white relative px-20">
-          <h1 data-aos="fade-right" className="opacity-0 text-black text-5xl sm:text-6xl  xl:text-7xl  absolute top-1/4"> 
+        <section style={{height: "110vh" }} className="bg-white px-20 flex justify-center items-center">
+          <h1 className="text-black text-5xl lg:text-6xl xl:text-7xl xl:font-bold  text-center"> 
             그 순간들을 돌이켜보니 <br/>
             바로 그것이 <br /> 나를 발전시키는 것임을 깨달았습니다.
           </h1>
@@ -123,7 +121,7 @@ export default function Home() {
             style={{
               opacity: .8,
               backgroundImage: "url('./home.png')" ,
-              height: 700,
+              height: 500,
               backgroundSize: "cover",
               backgroundRepeat: 'no-repeat',  
               backgroundAttachment: 'fixed'
@@ -134,36 +132,39 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={{height: "100vh" }} className="relative px-20 bg-white">
-          <h1 data-aos="fade-left" className="opacity-0 text-black text-5xl sm:text-6xl  xl:text-7xl absolute top-1/4 md:left-1/2 xl:left-1/2"> 
+        <section style={{height: "80vh" }} className="px-20 bg-white flex justify-end items-center">
+          <h1 data-aos="fade-left" className="opacity-0 text-black text-5xl lg:text-6xl xl:text-7xl xl:font-bold  text-center"> 
             당면한 문제를 해결했을 때 <br /> 그 <strong style={{color: "red"}}>짜릿함</strong>이 매일 아침 <br/>
             내가 일어나는 원동력입니다.
           </h1>
         </section>
 
 
-        <section style={{height: "100vh" }} className="bg-white relative px-20">
-          <h1 data-aos="fade-up" className="opacity-0 text-black text-7xl font-bold  absolute top-1/2 text-center left-1/4"> 
+        <section style={{height: "100vh" }} className="bg-white px-20 flex justify-center items-center">
+          <h1 data-aos="fade-up" className="opacity-0 text-black text-5xl lg:text-6xl xl:text-7xl xl:font-bold  text-center"> 
             그리고 이제는. 공동체의 일원으로서 <br/>
             그 <strong style={{color: "red"}}>짜릿함</strong>을 이어나가고자 합니다.
           </h1>
         </section>
 
         {/* Dedication 1 */}
-        <section style={{height: "100vh" }} className="bg-white relative px-40">
+        <section style={{height: "100vh"}} className="bg-white relative px-5 lg:px-24 xl:px-52  md:px-32 sm:px-5">
           <div>
             <h1 data-aos="fade-right" className="opacity-0 text-black text-7xl font-bold  absolute top-1/4 text-center"> 
               Dedication - CS
             </h1>
             <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">나를 큰폭으로 성장시켜주었던 전공 과제들 </p>
           </div>
-          <div className="absolute top-1/2">
+          <div className="absolute top-1/2 ">
             <SwiperCS />
           </div>
         </section>
 
+
+        <div style={{height: '150px'}}></div>
+
         {/* Dedication 2 */}
-        <section style={{height: "100vh" }} className="bg-white relative px-40">
+        <section style={{height: "100vh" }} className="bg-white relative px-5 lg:px-40 xl:px-30  md:px-30 sm:px-5">
           <div>
             <h1 data-aos="fade-right" className="opacity-0 text-black text-7xl font-bold  absolute top-1/4 text-center"> 
               Dedication - Project
