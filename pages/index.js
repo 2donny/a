@@ -6,7 +6,10 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Images from 'next/image';
-import Swiper from '../components/Swiper';
+import Swiper from '../components/Swiper-cs';
+
+import SwiperCS from '../components/Swiper-cs';
+import SwiperProject from '../components/Swiper-project';
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
@@ -84,6 +87,7 @@ export default function Home() {
         <title>Portfolio, Dedication</title>
         <meta name="description" content="웹 개발자 포트폴리오, Front-end Developer's Portfolio"/>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
       </Head>
 
       <main>
@@ -130,7 +134,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={{height: "100vh" }} className="relative px-20 bg-gray-100">
+        <section style={{height: "100vh" }} className="relative px-20 bg-white">
           <h1 data-aos="fade-left" className="opacity-0 text-black text-5xl sm:text-6xl  xl:text-7xl absolute top-1/4 md:left-1/2 xl:left-1/2"> 
             당면한 문제를 해결했을 때 <br /> 그 <strong style={{color: "red"}}>짜릿함</strong>이 매일 아침 <br/>
             내가 일어나는 원동력입니다.
@@ -154,7 +158,7 @@ export default function Home() {
             <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">나를 큰폭으로 성장시켜주었던 전공 과제들 </p>
           </div>
           <div className="absolute top-1/2">
-            <Swiper />
+            <SwiperCS />
           </div>
         </section>
 
@@ -167,18 +171,19 @@ export default function Home() {
             <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">몰입하여 진행한 프로젝트들 </p>
           </div>
           <div className="absolute top-1/2">
-            <Swiper />
+            <SwiperProject />
           </div>
         </section>
 
       </main>
     
+      <div className="h-80"></div>
       {/* footer */}
-      <footer className="h-32">
-        <div className="w-32 mx-auto flex justify-evenly content-center">
+      <footer className="flex flex-row h-32 items-center bg-white ">
+        <div className="w-32 mx-auto flex justify-evenly">
           <a href="https://github.com/2donny">
             <Images 
-              src="/GitHub-Mark-32px.png"
+              src="/github.svg"
               width={30}
               height={30}
             />
@@ -188,7 +193,6 @@ export default function Home() {
               src="/blog.png"
               width={30}
               height={30}
-              
             />
           </a>
         </div>

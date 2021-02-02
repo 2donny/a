@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-container {
+    width: 1200px;
+    height: 500px;
+    margin: 10px auto;
+}
+
+.swiper-pagination {
+    margin-top: 20px;
+}
+
+.swiper-wrapper {
+    padding-inline-start: 0;
+}
+
+.swiper-slide:hover img{
+    filter: blur(10px);
+}
+
+.swiper-slide:hover p{
+    opacity: 1;
+    transform: translateY(-20px);
+    transition: all 0.3s ease 0s;
+}
+
+.swiper-slide:not(:hover) p{
+    transform: translateY(0px);
+    transition: all 0.3s ease 0s;
+}
+
+.swiper-slide:hover h1 {
+    font-size: 1.8rem;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0s;
+}
+.swiper-slide:not(:hover) h1 {
+    transform: translateY(0px);
+    transition: all 0.3s ease 0s;
+}
