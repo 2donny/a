@@ -73,3 +73,7 @@ body {
     padding: 10px;
     border: 1px solid red;
 }
+
+.swiper-slide a:hover{
+    color: white;
+}

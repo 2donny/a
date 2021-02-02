@@ -164,18 +164,19 @@ export default function Home() {
         <div style={{height: '150px'}}></div>
 
         {/* Dedication 2 */}
-        <section style={{height: "100vh" }} className="bg-white relative px-5 lg:px-40 xl:px-30  md:px-30 sm:px-5">
+        <section style={{height: "100vh"}} className="bg-white relative px-5 lg:px-24 xl:px-52  md:px-32 sm:px-5">
           <div>
             <h1 data-aos="fade-right" className="opacity-0 text-black text-7xl font-bold  absolute top-1/4 text-center"> 
-              Dedication - Project
+              Dedication - CS
             </h1>
-            <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">몰입하여 진행한 프로젝트들 </p>
+            <p data-aos="fade-right" className="opacity-0 text-black text-sm font-bold  absolute top-1/4 mt-20">나를 큰폭으로 성장시켜주었던 전공 과제들 </p>
           </div>
-          <div className="absolute top-1/2">
+          <div className="absolute top-1/2 ">
             <SwiperProject />
           </div>
         </section>
 
+            
       </main>
     
       <div className="h-80"></div>
